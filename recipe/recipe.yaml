@@ -1,6 +1,6 @@
 context:
   name: dynamixel-sdk
-  version: "3.8.4"
+  version: "4.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ROBOTIS-GIT/DynamixelSDK/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 56c9ede06fbd541f2ac07e6257c4e43968442532d49f8ab075517fc9093ddb31
+  sha256: 966f656f38b9024839088add589fe90553db21b85a2cc12669209a2d25dda772
 
 build:
   script: python -m pip install ./python -vv
@@ -27,7 +27,7 @@ requirements:
 tests:
   - python:
       imports:
-      - dynamixel_sdk
+        - dynamixel_sdk
       pip_check: true
       python_version:
         - ${{ python_min }}.*
